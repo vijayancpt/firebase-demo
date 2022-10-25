@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 // import './firebase';
 
-import {getVegList} from  './firebase';
+import {getVegList,addValue,deleteData,updateData} from  './firebase';
 
 function App() {
 
@@ -18,14 +18,19 @@ setVegList(JSON.stringify(result));
 },[]);
 
   return (
-    <div className="App">
-      <header className="App-header" style={{backgroundColor:'red'}}>
+    <div className="App"  style={{backgroundColor:'red'}}>
+      <header>
         <h3>VegList:</h3>
         {
           vegList
         }
       </header>
+      <button onClick={addValue}>Add Value</button>
+      <button onClick={deleteData}>Delete Value</button>
+      <button onClick={updateData}>Update Value</button>
+
     </div>
+
   );
 }
 
