@@ -20,24 +20,8 @@ function App() {
   return (
     <div className="App"  style={{backgroundColor:'green', height:'500px'}}>
       <header>
-        <h3>VegList:</h3>
-       
-          
-          <table style={{
-            margin:'auto'
-          }} border={1}>
-            <th>Veg Name</th> <th>Veg Count</th>
+        <h3>VegList</h3>
 
-            {
-              vegList.map((curRow:any)=>(
-                <tr>
-                <td>{curRow.VegName}</td>
-                <td>{curRow.VegQuantity}</td>
-                </tr>
-              ))
-            }
-            
-          </table>
 
       </header>
       <div style={{margin:'500px'}}>
